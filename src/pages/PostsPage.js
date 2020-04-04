@@ -14,7 +14,7 @@ const PostsPage = ({ dispatch, posts, loading, hasErrors }) => {
   const renderPosts = () => {
     if (loading) return <p>Loading posts...</p>
     if (hasErrors) return <p>Unable to display posts.</p>
-    return posts.map(post => <Post key={post.id} post={post}></Post>)
+    return posts.map(post => <Post key={post.id} post={post} excerpt></Post>)
   }
 
   return (
